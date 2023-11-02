@@ -93,7 +93,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		MX_LED6_BLINK();
+		MX_LED7_BLINK();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

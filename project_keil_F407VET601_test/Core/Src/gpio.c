@@ -60,7 +60,34 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
+void delay(uint32_t time_ms) {
+    uint32_t i;
 
+    for (i = 0; i < (time_ms * 1000); i++) {
+        __NOP();
+    }
+}
+
+void MX_LED6_BLINK(void)
+{
+	// ??LED
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+	delay(1000);  // ??1?
+
+	// ??LED
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+	delay(1000);  // ??1?
+}
+void MX_LED7_BLINK(void)
+{
+	// ??LED
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+	delay(1000);  // ??1?
+
+	// ??LED
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+	delay(1000);  // ??1?
+}
 /* USER CODE BEGIN 2 */
 
 /* USER CODE END 2 */
